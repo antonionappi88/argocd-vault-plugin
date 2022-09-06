@@ -21,7 +21,7 @@ const (
 	EnvAWSRegion           = "AWS_REGION"
 	EnvVaultAddress        = "VAULT_ADDR"
 	EnvYCLKeyID            = "AVP_YCL_KEY_ID"
-	EnvYCLServiceAccountID = "AVP_YCL_SERVICE_AC COUNT_ID"
+	EnvYCLServiceAccountID = "AVP_YCL_SERVICE_ACCOUNT_ID"
 	EnvYCLPrivateKey       = "AVP_YCL_PRIVATE_KEY"
 	EnvAvpTeigiUser        = "AVP_TEIGI_USER"
 	EnvAvpTeigiPassword    = "AVP_TEIGI_PASSWORD"
