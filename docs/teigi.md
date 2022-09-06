@@ -44,3 +44,9 @@ Generate the binary running `make` and then to test it locally:
 If you want to test changes without rebuild all the time you can actually run
 
 `go run main.go generate small_secret.yaml -c teigi-conf.yaml`
+
+
+# TODO Lists
+
+- Add testing function
+- Replacing kinit exec calls with https://github.com/jcmturner/gokrb5/ library
