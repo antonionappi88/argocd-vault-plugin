@@ -48,6 +48,7 @@ var backendPrefixes []string = []string{
 	"google",
 	"sops",
 	"op_connect",
+	"teigi",
 }
 
 // New returns a new Config struct
@@ -230,6 +231,14 @@ func New(v *viper.Viper, co *Options) (*Config, error) {
 			}
 
 			backend = backends.NewOnePasswordConnectBackend(client)
+		}
+	case types.TeigiSecretsManagerbackend:
+		{
+			hostname := v.GetString(types.EnvAvpTeigiHostname)
+			port := v.GetString(types.EnvAvpTeigiPort)
+			username := v.GetString(types.EnvAvpTeigiUser)
+			password := v.GetString(types.EnvAvpTeigiPassword)
+			backend = backends.NewTeigiSecretmanagerBackend(hostname, port, username, password)
 		}
 	default:
 		return nil, fmt.Errorf("Must provide a supported Vault Type, received %s", v.GetString(types.EnvAvpType))
